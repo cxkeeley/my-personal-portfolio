@@ -8,6 +8,9 @@
 # sanity
 /sanity_portfolio
 
+# documentation
+documentation-portfolio-with-sanity.txt
+
 # testing
 /coverage
 
