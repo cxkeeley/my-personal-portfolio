@@ -11,8 +11,6 @@ node_modules
 # documentation
 documentation-portfolio-with-sanity.txt
 
-# variables
-.env
 
 # testing
 /coverage
