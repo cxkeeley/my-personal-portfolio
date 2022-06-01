@@ -11,7 +11,7 @@ node_modules
 # documentation
 documentation-portfolio-with-sanity.txt
 
-# env
+# variables
 .env
 
 # testing
