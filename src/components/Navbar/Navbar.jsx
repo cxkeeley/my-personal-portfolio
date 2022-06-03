@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
-        <img src={images.logo} alt='logo' />
+        <a href='#home'><img src={images.logo} alt='logo' /></a>
       </div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'contact'].map(item => (
@@ -42,6 +42,14 @@ const Navbar = () => {
               transition={{ duration: 0.85, ease: 'easeOut' }}
             >
               <HiX onClick={e => handleOnClick(e)} />
+
+              {/* {toggle && (
+                <motion.div
+                  initial={{ width: 300 }}
+                  animate={{ width: 0 }}
+                  transition={{ duration: 0.85, ease: 'easeOut' }}
+                ></motion.div>
+              )} */}
             </motion.span>
             <ul>
               {['home', 'about', 'work', 'skills', 'contact'].map(item => (
