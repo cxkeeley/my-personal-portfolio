@@ -42,14 +42,6 @@ const Navbar = () => {
               transition={{ duration: 0.85, ease: 'easeOut' }}
             >
               <HiX onClick={e => handleOnClick(e)} />
-
-              {/* {toggle && (
-                <motion.div
-                  initial={{ width: 300 }}
-                  animate={{ width: 0 }}
-                  transition={{ duration: 0.85, ease: 'easeOut' }}
-                ></motion.div>
-              )} */}
             </motion.span>
             <ul>
               {['home', 'about', 'work', 'skills', 'contact'].map(item => (
