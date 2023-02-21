@@ -28,10 +28,10 @@ const About = () => {
 
   return (
     <>
-      <h2 className='head-text'>
-        I know That <span>Good Apps</span>
+      <h2 className="head-text">
+        Good app design is <span>essential</span>
         <br />
-        means <span>Good Business</span>
+        for modern businesses to stay <span>competitive</span>
       </h2>
 
       <div className='app__profiles'>
