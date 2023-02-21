@@ -35,7 +35,6 @@ const Testimonial = () => {
             {testimonials.length && (
                 <>
                     <div className='app__testimonial-item app__flex'>
-                        <img src={urlFor(test.imgurl)} alt='testimmonial' />
                         <div className='app__testimonial-content'>
                             <p className='p-text'>{test.feedback}</p>
                             <div>
