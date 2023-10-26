@@ -1,34 +1,40 @@
-import React, { useState } from 'react';
-import { HiMenuAlt4, HiX } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react'
+import { HiMenuAlt4, HiX } from 'react-icons/hi'
+import { motion } from 'framer-motion'
 
-import { images } from '../../constants';
-import './Navbar.scss';
+import { images } from '../../constants'
+import './Navbar.scss'
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false)
 
-  const handleOnClick = e => {
-    e.stopPropagation();
-    setToggle(prevState => !prevState);
-  };
+  const handleOnClick = (e) => {
+    e.stopPropagation()
+    setToggle((prevState) => !prevState)
+  }
 
   return (
-    <nav className='app__navbar'>
-      <div className='app__navbar-logo'>
-        <a href='#home'><img src={images.logo} alt='logo' /></a>
+    <nav className="app__navbar">
+      <div className="app__navbar-logo">
+        <a href="#home">
+          <img src={images.logo} alt="logo" />
+        </a>
       </div>
-      <ul className='app__navbar-links'>
-        {['home', 'about', 'work', 'skills', 'contact'].map(item => (
-          <li className='app__flex p-text' key={`link-${item}`}>
+      <ul className="app__navbar-links">
+        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+          <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
+        <li className="app__flex p-text" key={`link-posts`}>
+          <div />
+          <a href={'https://cxkeeley-portfolio.vercel.app/'}>posts</a>
+        </li>
       </ul>
 
-      <div className='app__navbar-menu'>
-        <HiMenuAlt4 onClick={e => handleOnClick(e)} />
+      <div className="app__navbar-menu">
+        <HiMenuAlt4 onClick={(e) => handleOnClick(e)} />
 
         {toggle && (
           <motion.div
@@ -41,12 +47,12 @@ const Navbar = () => {
               animate={{ width: 70 }}
               transition={{ duration: 0.85, ease: 'easeOut' }}
             >
-              <HiX onClick={e => handleOnClick(e)} />
+              <HiX onClick={(e) => handleOnClick(e)} />
             </motion.span>
             <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map(item => (
+              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
                 <li key={item}>
-                  <a href={`#${item}`} onClick={e => handleOnClick(e)}>
+                  <a href={`#${item}`} onClick={(e) => handleOnClick(e)}>
                     {item}
                   </a>
                 </li>
@@ -56,7 +62,7 @@ const Navbar = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
