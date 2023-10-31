@@ -21,16 +21,12 @@ const Navbar = () => {
         </a>
       </div>
       <ul className="app__navbar-links">
-        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+        {['home', 'about', 'work', 'skills', 'contact', 'posts'].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <a href={item === 'posts' ? 'https://cxkeeley-portfolio.vercel.app/' : `#${item}`}>{item}</a>
           </li>
         ))}
-        <li className="app__flex p-text" key={`link-posts`}>
-          <div />
-          <a href={'https://cxkeeley-portfolio.vercel.app/'}>posts</a>
-        </li>
       </ul>
 
       <div className="app__navbar-menu">
@@ -50,17 +46,13 @@ const Navbar = () => {
               <HiX onClick={(e) => handleOnClick(e)} />
             </motion.span>
             <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+              {['home', 'about', 'work', 'skills', 'contact', 'posts'].map((item) => (
                 <li key={item}>
-                  <a href={`#${item}`} onClick={(e) => handleOnClick(e)}>
+                  <a href={item === 'posts' ? 'https://cxkeeley-portfolio.vercel.app/' : `#${item}`} onClick={(e) => handleOnClick(e)}>
                     {item}
                   </a>
                 </li>
               ))}
-              <li key={`posts`}>
-                <div />
-                <a href={'https://cxkeeley-portfolio.vercel.app/'}>posts</a>
-              </li>
             </ul>
           </motion.div>
         )}
