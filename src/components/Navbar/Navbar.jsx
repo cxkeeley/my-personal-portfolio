@@ -57,6 +57,10 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              <li key={`posts`}>
+                <div />
+                <a href={'https://cxkeeley-portfolio.vercel.app/'}>posts</a>
+              </li>
             </ul>
           </motion.div>
         )}
